@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<h1>WordCount</h1>
+
+<a class="btn btn-primary" href="{% url 'WordCount:about' %}">about 페이지로 가기</a>
+<br>
+<br>
+<!-- 사용자 정보 입력. -->
+<form action="{% url 'WordCount:result' %}">
+    <textarea name="fulltext" cols="40" rows="10"></textarea>
+    <br>
+    <input type="submit" value="Count!">
+</form>  
+
+{% endblock %}
